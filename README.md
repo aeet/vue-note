@@ -228,3 +228,27 @@ NuxtLayout component itself.
 
 
 ## 13. Dynamic Layouts
+
+```vue
+const layout = ref('blog');
+const toggleLayout = () => {
+// Toggle between 'blog' and 'blog-condensed'
+if (layout.value === 'blog') {
+layout.value = 'blog-condensed';
+} else {
+layout.value = 'blog';
+}
+setPageLayout(layout.value);
+};
+```
+
+Which can also be used in route middleware:
+
+```vue
+export default defineNuxtRouteMiddleware((to) => {
+// Use condensed layout, eg ?condensed=true
+if (to.query.condensed === 'true') {
+setPageLayout('condensed');
+}
+});
+```
