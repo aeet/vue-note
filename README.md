@@ -142,3 +142,17 @@ Mastering Nuxt
 - noopener: The newly opened page cannot obtain the window object of the source page.
 - noreferrer: Prevent referrer info from being passed to the target site by removing the referrer in http.
 - nofollow: Used to tell search engines not to follow specific web links.
+
+## 8.Use NuxtLink to open links in a new tab
+
+open links in a new tab
+
+```vue
+<NuxtLink
+to="/articles"
+target="_blank"
+>
+Mastering Nuxt 3
+</NuxtLink>
+```
+
