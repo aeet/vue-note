@@ -213,3 +213,18 @@ layout: blogPost
 ---
 # All About Layouts
 ```
+
+## 12. Layout fallbacks
+
+```vue
+<NuxtLayout fallback="differentDefault">
+    <NuxtPage />
+</NuxtLayout>
+```
+
+Normally, the NuxtLayout component will use the default layout if no other layout is
+specified — either through definePageMeta , setPageLayout , or directly on the
+NuxtLayout component itself.
+
+
+## 13. Dynamic Layouts
