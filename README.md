@@ -200,13 +200,11 @@ definePageMeta({
 layout: false,
 });
 
-----
+--or--
 
 definePageMeta({
 layout: 'blogPost'
 })
-----
-
 ```
 
 ```md
