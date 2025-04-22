@@ -143,7 +143,7 @@ Mastering Nuxt
 - noreferrer: Prevent referrer info from being passed to the target site by removing the referrer in http.
 - nofollow: Used to tell search engines not to follow specific web links.
 
-## 8.Use NuxtLink to open links in a new tab
+## 8. Use NuxtLink to open links in a new tab
 
 open links in a new tab
 
@@ -155,7 +155,8 @@ target="_blank"
 Mastering Nuxt 3
 </NuxtLink>
 ```
-## 9.Prefetch Pages with NuxtLink
+
+## 9. Prefetch Pages with NuxtLink
 
 prefetch
 
@@ -167,4 +168,50 @@ no prefetch
 
 ```vue
 <NuxtLink to="/articles" no-prefetch>Articles</NuxtLink>
+```
+
+## 10. Custom NuxtLink Component
+
+```ts
+defineNuxtLink({
+componentName?: string;
+externalRelAttribute?: string;
+activeClass?: string;
+exactActiveClass?: string;
+prefetchedClass?: string;
+trailingSlash?: 'append' | 'remove'
+}) => Component
+```
+
+## 11. Layout Components
+
+define layout
+
+```vue
+<NuxtLayout name="blogPost">
+<NuxtPage />
+</NuxtLayout>
+```
+
+use layout
+
+```vue
+definePageMeta({
+layout: false,
+});
+
+----
+
+definePageMeta({
+layout: 'blogPost'
+})
+----
+
+```
+
+```md
+---
+layout: blogPost
+---
+# All About Layouts
 ```
