@@ -155,4 +155,16 @@ target="_blank"
 Mastering Nuxt 3
 </NuxtLink>
 ```
+## 9.Prefetch Pages with NuxtLink
 
+prefetch
+
+```vue
+<NuxtLink to="/articles" prefetch>Articles</NuxtLink>
+```
+
+no prefetch
+
+```vue
+<NuxtLink to="/articles" no-prefetch>Articles</NuxtLink>
+```
